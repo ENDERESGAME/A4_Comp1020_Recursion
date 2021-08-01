@@ -1,3 +1,8 @@
+/*
+I treid looking for IntNode Class in notes but I havnt found it there thus I tried making it 
+as per my idea including some book refereces from this website
+" https://home.cs.colorado.edu/~main/docs/edu/colorado/nodes/IntNode.html "
+*/
 public class IntNode {
 	public int data;
 	public IntNode n;
