@@ -17,6 +17,10 @@ public class IntLinkList {
     //Add the newItem at the FRONT of the list.
     top = new IntNode(newItem,top);
   }
+  /*Q1 part a
+  here this constructor IntLinkedList create a linked list havingg the 
+  same data from int array.
+  */
   public IntLinkList(int[] data){
     top=new IntNode(data[0]);
     IntNode current=top;
@@ -26,6 +30,9 @@ public class IntLinkList {
       current=current.n;
     }
   }
+  /*Q1 part b
+  this is a simple metthod which return true when linked list is null.
+    */
   public boolean empty(){
     if(top==null){
       return true;
@@ -34,9 +41,15 @@ public class IntLinkList {
       return false;
     }
   }
+  /*Q1 part c
+  here this metthod will return the top of the data.
+  */
   public int first(){
     return top.data;
   }
+  /*Q1 part d
+  this will remove the first integer from the list.
+  */
   public void removeFirst(){
     if(top==null){
       return ;
@@ -46,6 +59,10 @@ public class IntLinkList {
       return;
     }
   }
+  /*Q1 part e
+  this will retun a new set of node witha s the same data
+   from the original list.
+  */
   public IntLinkList clone(){
     IntNode current=top;
     IntNode ans=new IntNode(-1);
@@ -59,6 +76,10 @@ public class IntLinkList {
     linkedlist.top=ans.n;
     return linkedlist;
   }
+  /*Q1 part f 
+  (This took a bit long to think about Just a feeling It took me around a day)
+  The List will remain in ascending order even if we adsd new int to it.
+    */
   public void ordInsert(int newItem){
     IntNode insert=new IntNode(newItem,top);
     if(newItem<top.data){
@@ -89,6 +110,11 @@ public class IntLinkList {
     }
     return answer+">>";
   }
+  /* Q2
+   it will return true if  top and other are identical 
+   and   inevery other condition like any difference bw then it will 
+   return false
+  */
   public boolean equals(IntLinkList other){
     if(this.top==null && other.top ==null){
       return true;
